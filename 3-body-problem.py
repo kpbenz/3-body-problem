@@ -30,7 +30,7 @@ w.addItem(g)
 # Artificial Universe
 nbp = NBodyProblem(g=0.0001,trail=2000)
 nbp.add_body("Sun",   True, 1000.0,    0.0,  0.0,   0.0,  0.0,     0.0000,  0.0)
-nbp.add_body("Earth", True,    2.0,    8.0,  0.0,   0.0,  0.0,     0.1118,  0.0)
+nbp.add_body("Earth", True,    2.0,    8.0,  0.0,   0.0,  0.0,     0.1110,  0.0)
 nbp.add_body("Moon",  True,    0.8,    8.5,  0.0,   0.0,  0.0,     0.1044,  0.0400)
 
 
@@ -39,17 +39,17 @@ color = [(0.78, 0.55, 0.00, 1.0), (1.0, 0.0, 0.0, 1.0), (0.0, 1.0, 0.0, 1.0)]
 
 sp1 = gl.GLScatterPlotItem(pos=nbp.pos[0], size=size[0], color=color[0], pxMode=False)
 w.addItem(sp1)
-sp1_trail = gl.GLScatterPlotItem(pos=nbp.pos[0], size=size[0]/3, color=color[0], pxMode=False)
+sp1_trail = gl.GLScatterPlotItem(pos=nbp.pos[0], size=size[0]/5, color=color[0], pxMode=False)
 w.addItem(sp1_trail)
 
 sp2 = gl.GLScatterPlotItem(pos=nbp.pos[1], size=size[1], color=color[1], pxMode=False)
 w.addItem(sp2)
-sp2_trail = gl.GLScatterPlotItem(pos=nbp.pos[1], size=size[1]/3, color=color[1], pxMode=False)
+sp2_trail = gl.GLScatterPlotItem(pos=nbp.pos[1], size=size[1]/5, color=color[1], pxMode=False)
 w.addItem(sp2_trail)
 
 sp3 = gl.GLScatterPlotItem(pos=nbp.pos[2], size=size[2], color=color[2], pxMode=False)
 w.addItem(sp3)
-sp3_trail = gl.GLScatterPlotItem(pos=nbp.pos[2], size=size[2]/3, color=color[2], pxMode=False)
+sp3_trail = gl.GLScatterPlotItem(pos=nbp.pos[2], size=size[2]/5, color=color[2], pxMode=False)
 w.addItem(sp3_trail)
 
 
