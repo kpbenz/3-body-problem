@@ -62,9 +62,30 @@ class NBodyProblem:
 
             self.vel[idx] = [vx, vy, vz]
 
+    def get_body_name(self, idx):
+        """Return name of body with given index."""
+        try:
+            name = self.name[idx]
+        except:
+            name = None
+
+        return name
+
+    def set_body_mass(self, name, mass):
+        """Set mass of body  identifed  by name."""
+        # find index
+        try:
+            idx = self.name.index(name)
+        except:
+           idx = -1
+
+        if idx > -1:
+            self.mass[idx] = mass
+            return True
+        return False
+
     def iterate(self):
 
-        
         for j in range(self.N):
 
             # skip disabled bodies
